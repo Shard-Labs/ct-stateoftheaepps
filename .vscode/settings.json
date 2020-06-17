@@ -1,0 +1,5 @@
+{
+  "editor.autoIndent": "keep",
+  "editor.tabSize": 2,
+  "css.lint.propertyIgnoredDueToDisplay": "ignore"
+}

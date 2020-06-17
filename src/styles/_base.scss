@@ -1,0 +1,30 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  background: $backgroundColor;
+  color: $textColor;
+  text-align: center;
+
+  .description {
+    .titleMain {
+      font-size: 18px;
+    }
+    .descriptive {
+      font-size: 12px;
+    }
+
+    @media only screen and (min-width: 769px) {
+      .titleMain {
+        font-size: 50px;
+      }
+      .descriptive {
+        font-size: 20px;
+        color: $textColor;
+        width: 70%;
+      }
+    }
+  }
+}
