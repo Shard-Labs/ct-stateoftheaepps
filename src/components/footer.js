@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <p className="textFooter">Powered by shardlabs.io</p>
+    <footer class="footer">
+      <p class="text-footer">Powered by shardlabs.io</p>
     </footer>
-  )
+  );
 }
