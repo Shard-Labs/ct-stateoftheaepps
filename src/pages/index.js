@@ -5,7 +5,7 @@ import "../styles/styles.scss";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
 
       <main class="main">
@@ -20,6 +20,6 @@ export default function Home() {
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 }
