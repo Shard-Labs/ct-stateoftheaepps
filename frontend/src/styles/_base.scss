@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $background-color;
+  color: $text-color;
+  min-height: 100vh;
+  position: relative;
+}

@@ -1,0 +1,22 @@
+.header {
+  height: 12%;
+
+  .logo-desktop {
+    display: none;
+
+    @media screen and (min-width: 769px) {
+      display: block;
+      margin-left: 10%;
+    }
+  }
+
+  .logo-mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
