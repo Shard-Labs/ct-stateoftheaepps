@@ -3,11 +3,11 @@ import Header from './header';
 import Footer from './footer';
 import '../styles/styles.scss';
 
-function Layout(props) {
+function Layout({ children }) {
   return (
     <>
       <Header />
-      <main>{props.children}</main>
+      <main class="main">{children}</main>
       <Footer />
     </>
   );
