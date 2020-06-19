@@ -1,13 +1,9 @@
-import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import "../styles/styles.scss";
+import React from 'react';
+import Layout from '../components/layout';
 
 export default function Home() {
   return (
-    <>
-      <Header />
-
+    <Layout>
       <main class="main">
         <section class="description">
           <h1 class="title-main">List of most used Æternity æpps</h1>
@@ -18,8 +14,6 @@ export default function Home() {
           </p>
         </section>
       </main>
-
-      <Footer />
-    </>
+    </Layout>
   );
 }

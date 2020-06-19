@@ -1,6 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Header from './header';
+import Footer from './footer';
+import '../styles/styles.scss';
 
-export default Layout () {
-
-
+function Layout(props) {
+  return (
+    <>
+      <Header />
+      <main>{props.children}</main>
+      <Footer />
+    </>
+  );
 }
+
+export default Layout;
