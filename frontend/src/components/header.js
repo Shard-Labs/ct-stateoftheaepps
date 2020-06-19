@@ -1,6 +1,6 @@
-import React from "react";
-import DesktopLogo from "../assets/images/logo.png";
-import MobileLogo from "../assets/images/logo_mobile.png";
+import React from 'react';
+import DesktopLogo from '../assets/images/logo.png';
+import MobileLogo from '../assets/images/logo_mobile.png';
 
 function Header() {
   return (

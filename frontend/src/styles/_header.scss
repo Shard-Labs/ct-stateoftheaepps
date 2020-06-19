@@ -1,20 +1,19 @@
 .header {
   height: 12%;
+  padding: 0rem 3rem;
+  display: flex;
+  justify-content: center;
 
   .logo-desktop {
     display: none;
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) {
       display: block;
-      margin-left: 10%;
+      margin-right: auto;
     }
   }
 
   .logo-mobile {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
     @media screen and (min-width: 768px) {
       display: none;
     }

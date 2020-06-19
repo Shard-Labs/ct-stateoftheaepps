@@ -1,25 +1,19 @@
-import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import "../styles/styles.scss";
+import React from 'react';
+import Layout from '../components/layout';
 
-export default function Home() {
+function Home() {
   return (
-    <>
-      <Header />
-
-      <main class="main">
-        <section class="description">
-          <h1 class="title-main">List of most used Æternity æpps</h1>
-          <p class="description-text">
-            Check to see the progress and development of æpps and Æternity
-            blockchain ecosystem. List is updated daily based on the number of
-            transactions in the last 24 hours.
-          </p>
-        </section>
-      </main>
-
-      <Footer />
-    </>
+    <Layout>
+      <section class="description">
+        <h1 class="title-main">List of most used Æternity æpps</h1>
+        <p class="description-text">
+          Check to see the progress and development of æpps and Æternity
+          blockchain ecosystem. List is updated daily based on the number of
+          transactions in the last 24 hours.
+        </p>
+      </section>
+    </Layout>
   );
 }
+
+export default Home;
