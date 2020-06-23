@@ -1,5 +1,5 @@
 import Dapp from '../models/Dapp.ts';
-import { config } from 'https://deno.land/x/dotenv/mod.ts';
+import { config } from '../deps.ts';
 
 const env = config();
 
