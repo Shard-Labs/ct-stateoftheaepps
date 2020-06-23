@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import Dapp from "../models/Dapp.ts";
 import { Contract } from "../types.ts";
 import { Base64 } from "../deps.ts";
+=======
+import Dapp from '../models/Dapp.ts';
+import { config } from '../deps.ts';
+
+const env = config();
+>>>>>>> f208604... Add docker files
 
 // Store dapp info to DB
 const getTransactions = async (
