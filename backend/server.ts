@@ -1,7 +1,6 @@
 import { Application } from './deps.ts';
 import { config } from './deps.ts';
 import cronStart from './cron/cron.ts';
-
 import router from './routes.ts';
 import { connectToDB } from './config/db.ts';
 
@@ -11,6 +10,12 @@ const app = new Application();
 
 app.use(router.routes());
 app.use(router.allowedMethods());
+
+app.use(async (context) => {
+  await context.send({
+    root: `${Deno.cwd()}/public/img`,
+  });
+});
 
 connectToDB();
 cronStart();

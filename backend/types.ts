@@ -1,7 +1,7 @@
 interface Contract {
   name: string;
   contract_address: string;
-  image_url: string;
+  image_name: string;
 }
 
 export { Contract };

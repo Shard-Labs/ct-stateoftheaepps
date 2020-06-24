@@ -13,7 +13,7 @@ class Dapp extends Model {
       unique: true,
     },
     tx_count: DataTypes.INTEGER,
-    img_url: DataTypes.STRING,
+    logo: DataTypes.TEXT,
     contract_address: {
       type: DataTypes.STRING,
       unique: true,
