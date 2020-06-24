@@ -5,8 +5,8 @@ import MobileLogo from '../assets/images/logo_mobile.png';
 function Header() {
   return (
     <header class="header">
-      <img class="logo-desktop" src={DesktopLogo} alt="logo" />
-      <img class="logo-mobile" src={MobileLogo} alt="logo" />
+      <img class="logoDesktop" src={DesktopLogo} alt="logo" />
+      <img class="logoMobile" src={MobileLogo} alt="logo" />
     </header>
   );
 }
