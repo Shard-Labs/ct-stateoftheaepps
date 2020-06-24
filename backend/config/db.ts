@@ -11,7 +11,7 @@ const connectToDB = () => {
   db.link([Dapp]);
 
   // Create tables
-  //db.sync();
+  //db.sync({ drop: true });
 
   console.log('SQLite database started!');
 };
