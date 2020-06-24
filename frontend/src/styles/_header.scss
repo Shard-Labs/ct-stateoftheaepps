@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
 
-  .logoDesktop {
+  .logo-desktop {
     display: none;
 
     @media screen and (min-width: 768px) {
@@ -13,7 +13,7 @@
     }
   }
 
-  .logoMobile {
+  .logo.mobile {
     @media screen and (min-width: 768px) {
       display: none;
     }

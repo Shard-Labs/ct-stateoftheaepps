@@ -3,10 +3,10 @@
   padding: 0;
 }
 
-.listRow {
-  background-color: $itemColor;
+.list-row {
+  background-color: $item-color;
   display: flex;
-  box-shadow: 0 0.25rem 0.25rem rgba(16, 12, 8, 0.1);
+  box-shadow: 0 0.25rem 0.25rem rgba($text-color, 0.1);
   border-radius: 0.3125rem;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +26,7 @@
   }
 }
 
-.appLogo {
+.app-logo {
   inline-size: inherit;
   height: 3rem;
   border-radius: 0.3125rem;
@@ -37,15 +37,15 @@
   }
 }
 
-.appName {
-  color: $textColor;
+.app-name {
+  color: $text-color;
   @media screen and (min-width: 768px) {
     font-size: 1.4rem;
   }
 }
 
-.transactionsNumber {
-  color: $accentColor;
+.transactions-number {
+  color: $accent-color;
 
   @media screen and (min-width: 768px) {
     font-size: 1.75rem;

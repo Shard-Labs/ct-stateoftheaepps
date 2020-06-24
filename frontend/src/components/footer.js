@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer class="footer">
-      <p class="textFooter">Powered by shardlabs.io</p>
+    <footer className="footer">
+      <p className="text-footer">Powered by shardlabs.io</p>
     </footer>
   );
 }
