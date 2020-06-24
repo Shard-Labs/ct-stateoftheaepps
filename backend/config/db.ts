@@ -19,8 +19,12 @@ const connectToDB = () => {
 =======
 
   // Create tables
+<<<<<<< HEAD
   //db.sync();
 >>>>>>> f208604... Add docker files
+=======
+  //db.sync({ drop: true });
+>>>>>>> 80a2124... Change getTransactions to accept an array of contracts
 
   // Create tables
   //db.sync({ drop: true });
