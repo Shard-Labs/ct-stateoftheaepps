@@ -11,7 +11,11 @@ const env = config();
 >>>>>>> f208604... Add docker files
 =======
 import { Contract } from '../types.ts';
+<<<<<<< HEAD
 >>>>>>> 80a2124... Change getTransactions to accept an array of contracts
+=======
+import { Base64 } from '../deps.ts';
+>>>>>>> 8a97735... Store images as base64
 
 // Store dapp info to DB
 const getTransactions = async (
@@ -60,6 +64,10 @@ const getTransactions = async (
       console.log('Total number of transactions: ' + data.transactions.length);
       console.log('Filtered number of transactions: ' + filteredData.length);
 
+      const base64image = Base64.fromFile(
+        `${Deno.cwd()}/public/img/${contract.image_name}`
+      ).toString();
+
       const dapp = await Dapp.where(
         'contract_address',
         contract.contract_address
@@ -79,8 +87,12 @@ const getTransactions = async (
         await Dapp.where('contract_address', contract.contract_address).update({
           dapp_name: contract.name,
           tx_count: filteredData.length,
+<<<<<<< HEAD
           img_url: contract.image_url,
 >>>>>>> 80a2124... Change getTransactions to accept an array of contracts
+=======
+          logo: base64image,
+>>>>>>> 8a97735... Store images as base64
         });
       } else {
         await Dapp.create({
@@ -93,7 +105,7 @@ const getTransactions = async (
           logo: base64image,
 =======
           tx_count: filteredData.length,
-          img_url: contract.image_url,
+          logo: base64image,
           contract_address: contract.contract_address,
 >>>>>>> 80a2124... Change getTransactions to accept an array of contracts
         });

@@ -15,6 +15,10 @@ class Dapp extends Model {
     website_url: DataTypes.STRING,
     description: DataTypes.STRING,
     tx_count: DataTypes.INTEGER,
+<<<<<<< HEAD
+=======
+    logo: DataTypes.TEXT,
+>>>>>>> 8a97735... Store images as base64
     contract_address: {
       type: DataTypes.STRING,
       unique: true,
