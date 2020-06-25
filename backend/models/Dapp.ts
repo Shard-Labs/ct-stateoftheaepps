@@ -1,7 +1,7 @@
-import { Model, DataTypes } from 'https://deno.land/x/denodb/mod.ts';
+import { Model, DataTypes } from "https://deno.land/x/denodb/mod.ts";
 
 class Dapp extends Model {
-  static table = 'dapps';
+  static table = "dapps";
   static fields = {
     id: {
       type: DataTypes.INTEGER,
@@ -12,12 +12,14 @@ class Dapp extends Model {
       type: DataTypes.STRING,
       unique: true,
     },
+    website_url: DataTypes.STRING,
+    description: DataTypes.STRING,
     tx_count: DataTypes.INTEGER,
-    img_url: DataTypes.STRING,
     contract_address: {
       type: DataTypes.STRING,
       unique: true,
     },
+    logo: DataTypes.TEXT,
   };
   static timestamps = true;
 }
