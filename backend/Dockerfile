@@ -9,7 +9,7 @@ USER root
 COPY deps.ts .
 RUN deno cache deps.ts
 
-ADD . .
+COPY . .
 RUN deno cache server.ts
 
 CMD ["run", "--allow-net", "--allow-read", "--allow-write", "server.ts"]
