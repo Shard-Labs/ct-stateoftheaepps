@@ -1,9 +1,10 @@
-.list {
+.app-list {
   margin-top: 3rem;
   padding: 0;
+  padding-bottom: 5rem;
 }
 
-.list-row {
+.applist-row {
   background-color: $item-color;
   display: flex;
   box-shadow: 0 0.25rem 0.25rem rgba($text-color, 0.1);
@@ -11,7 +12,8 @@
   justify-content: space-between;
   align-items: center;
   height: 3.125rem;
-  padding: 0 1rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
 
   @media screen and (min-width: 768px) {
     height: 4.5rem;
@@ -27,9 +29,11 @@
 }
 
 .app-logo {
-  inline-size: inherit;
+  inline-size: 5rem;
   height: 3rem;
   border-radius: 0.3125rem;
+  margin-right: auto;
+  margin-left: 3rem;
 
   @media screen and (min-width: 768px) {
     height: 4.3rem;
@@ -39,6 +43,7 @@
 
 .app-name {
   color: $text-color;
+  margin-right: auto;
   @media screen and (min-width: 768px) {
     font-size: 1.4rem;
   }

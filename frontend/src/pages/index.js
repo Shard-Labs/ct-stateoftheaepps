@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import List from '../components/aeppslist';
 
 function Home() {
   return (
@@ -15,22 +16,7 @@ function Home() {
           If you want to claim your æpp contact us info@cryptotask.org.
         </p>
       </section>
-
-      <ul className="list">
-        <li className="list-row">
-          <span className="rank">1.</span>
-          <img
-            className="app-logo"
-            src="https://jelly.market/static/logo-white-174143b2b447566a6eb46e19cbe10b7b.svg"
-            alt="aepp logo"
-          />
-          <a className="app-name" href="https://jelly.market/" target="_blank">
-            JellySwap
-          </a>
-
-          <span className="transactions-number">12345</span>
-        </li>
-      </ul>
+      <List />
     </Layout>
   );
 }
