@@ -16,9 +16,12 @@ class Dapp extends Model {
     description: DataTypes.STRING,
     tx_count: DataTypes.INTEGER,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     logo: DataTypes.TEXT,
 >>>>>>> 8a97735... Store images as base64
+=======
+>>>>>>> 5cb050f... Update Dapp model with website_url and description fields
     contract_address: {
       type: DataTypes.STRING,
       unique: true,

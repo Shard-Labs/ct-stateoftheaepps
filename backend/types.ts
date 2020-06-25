@@ -1,6 +1,9 @@
 interface Contract {
   name: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5cb050f... Update Dapp model with website_url and description fields
   website_url: string;
   description: string;
   contract_address: string;
