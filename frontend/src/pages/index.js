@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import AeppList from '../components/aepps-list';
+import AeppList from '../components/aepp-list';
 
 function Home() {
   return (
@@ -13,7 +13,11 @@ function Home() {
           transactions in the last 24 hours.
         </p>
         <p className="description-text">
-          If you want to claim your æpp contact us info@cryptotask.org.
+          If you want to claim your æpp contact us{' '}
+          <a href="mailto:info@cryptotask.org" class="mail-to">
+            info@cryptotask.org
+          </a>
+          .
         </p>
       </section>
       <AeppList />

@@ -5,7 +5,7 @@
 }
 
 .aepp-list-item {
-  background-color: $item-color;
+  background-color: $item-bg-color;
   display: flex;
   box-shadow: 0 0.25rem 0.25rem $list-item-shadow-color;
   border-radius: 0.3125rem;
@@ -33,14 +33,14 @@
   height: 3rem;
   border-radius: 0.3125rem;
   margin-right: auto;
-  margin-left: 10%;
+  margin-left: 15%;
   object-fit: scale-down;
 
   @media screen and (min-width: 768px) {
     height: 4.3rem;
     width: 5rem;
     border-radius: 0.3125rem;
-    margin-left: 30%;
+    margin-left: 70%;
   }
 }
 

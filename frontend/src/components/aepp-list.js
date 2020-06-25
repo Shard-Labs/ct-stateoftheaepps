@@ -1,6 +1,6 @@
 import React from 'react';
 
-const aepplist = [
+const aeppList = [
   {
     id: 1,
     name: 'Superhero',
@@ -30,7 +30,7 @@ const aepplist = [
 function AeppList() {
   return (
     <ul className="aepp-list">
-      {aepplist.map((item, index) => (
+      {aeppList.map((item, index) => (
         <li className="aepp-list-item" key={item.id}>
           <span className="rank">{index + 1}.</span>
           <a href={item.aeppUrl} target="_blank">
