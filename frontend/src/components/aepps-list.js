@@ -1,6 +1,6 @@
 import React from 'react';
 
-const list = [
+const aepplist = [
   {
     id: 1,
     name: 'Superhero',
@@ -27,14 +27,16 @@ const list = [
   },
 ];
 
-function List() {
+function AeppList() {
   return (
-    <ul className="app-list">
-      {list.map((item, index) => (
-        <li className="applist-row" key={item.id}>
+    <ul className="aepp-list">
+      {aepplist.map((item, index) => (
+        <li className="aepp-list-item" key={item.id}>
           <span className="rank">{index + 1}.</span>
-          <img src={item.imageUrl} className="app-logo" />
-          <a href={item.aeppUrl} target="_blank" className="app-name">
+          <a href={item.aeppUrl} target="_blank">
+            <img src={item.imageUrl} className="aepp-logo" alt={item.name} />
+          </a>
+          <a href={item.aeppUrl} target="_blank" className="aepp-name">
             {item.name}
           </a>
           <span className="transactions-number">{item.transactionsNumber}</span>
@@ -44,4 +46,4 @@ function List() {
   );
 }
 
-export default List;
+export default AeppList;

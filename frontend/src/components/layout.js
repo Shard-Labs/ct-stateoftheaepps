@@ -9,7 +9,6 @@ function Layout({ children }) {
     <>
       <Header />
       <main className="main">{children}</main>
-
       <Footer />
     </>
   );
