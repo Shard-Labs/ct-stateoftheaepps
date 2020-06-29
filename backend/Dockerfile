@@ -10,6 +10,10 @@ COPY deps.ts .
 RUN deno cache deps.ts
 
 COPY . .
+ADD . .
+
+COPY . .
+
 RUN deno cache server.ts
 
 CMD ["run", "--allow-net", "--allow-read", "--allow-write", "server.ts"]

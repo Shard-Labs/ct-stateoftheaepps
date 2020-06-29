@@ -1,7 +1,7 @@
-import { Model, DataTypes } from "https://deno.land/x/denodb/mod.ts";
+import { Model, DataTypes } from 'https://deno.land/x/denodb/mod.ts';
 
 class Dapp extends Model {
-  static table = "dapps";
+  static table = 'dapps';
   static fields = {
     id: {
       type: DataTypes.INTEGER,
