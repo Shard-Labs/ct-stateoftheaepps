@@ -12,11 +12,12 @@
   justify-content: space-between;
   align-items: center;
   height: 3.125rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   margin-bottom: 1rem;
 
   @media screen and (min-width: 768px) {
     height: 4.5rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -29,36 +30,35 @@
 }
 
 .aepp-logo {
-  width: 4em;
-  height: 3rem;
-  border-radius: 0.3125rem;
-  margin-right: auto;
-  margin-left: 15%;
+  width: 2.65rem;
   object-fit: scale-down;
 
   @media screen and (min-width: 768px) {
-    height: 4.3rem;
     width: 5rem;
-    border-radius: 0.3125rem;
-    margin-left: 70%;
+    margin-right: auto;
+    margin-left: 5%;
   }
 }
 
 .aepp-name {
   color: $text-color;
-  margin-right: auto;
-  margin-left: 15%;
+
+  width: 8.125rem;
   @media screen and (min-width: 768px) {
     font-size: 1.4rem;
-    align-self: center;
-    margin-left: 30%;
+    margin-right: auto;
+    margin-left: 5%;
+    width: 22.5rem;
+    text-align: center;
   }
 }
 
 .transactions-number {
   color: $accent-color;
+  widows: 2.8rem;
 
   @media screen and (min-width: 768px) {
     font-size: 1.75rem;
+    widows: 3.56rem;
   }
 }

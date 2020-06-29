@@ -14,7 +14,7 @@ function Home() {
         </p>
         <p className="description-text">
           If you want to claim your æpp contact us{' '}
-          <a href="mailto:info@cryptotask.org" class="mail-to">
+          <a href="mailto:info@cryptotask.org" className="mail-to">
             info@cryptotask.org
           </a>
           .

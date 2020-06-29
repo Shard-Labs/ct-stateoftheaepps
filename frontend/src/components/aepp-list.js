@@ -1,12 +1,14 @@
 import React from 'react';
 
+import AeppListItem from '../components/aepp-list-item'
+
 const aeppList = [
   {
     id: 1,
     name: 'Superhero',
     aeppUrl: 'https://superhero.com/',
     imageUrl: 'https://aeternity.com/assets/img/logo_superhero.16bf74fb.svg',
-    transactionsNumber: 73,
+    transactionsNumber: 173,
   },
   {
     id: 2,
@@ -27,23 +29,22 @@ const aeppList = [
   },
 ];
 
+
+
+
 function AeppList() {
+
+
   return (
     <ul className="aepp-list">
-      {aeppList.map((item, index) => (
-        <li className="aepp-list-item" key={item.id}>
-          <span className="rank">{index + 1}.</span>
-          <a href={item.aeppUrl} target="_blank">
-            <img src={item.imageUrl} className="aepp-logo" alt={item.name} />
-          </a>
-          <a href={item.aeppUrl} target="_blank" className="aepp-name">
-            {item.name}
-          </a>
-          <span className="transactions-number">{item.transactionsNumber}</span>
-        </li>
-      ))}
+      {
+        aeppList.map((item, index) => <AeppListItem index={index + 1} id={item.id} name={item.name} aeppUrl={item.aeppUrl} imageUrl={item.imageUrl} transactionsNumber={item.transactionsNumber} />)
+      }
     </ul>
+
   );
+
+
 }
 
 export default AeppList;
