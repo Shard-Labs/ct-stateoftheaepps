@@ -1,7 +1,7 @@
-import { Model, DataTypes } from "https://deno.land/x/denodb/mod.ts";
+import { Model, DataTypes } from 'https://deno.land/x/denodb/mod.ts';
 
 class Dapp extends Model {
-  static table = "dapps";
+  static table = 'dapps';
   static fields = {
     id: {
       type: DataTypes.INTEGER,
@@ -15,13 +15,6 @@ class Dapp extends Model {
     website_url: DataTypes.STRING,
     description: DataTypes.STRING,
     tx_count: DataTypes.INTEGER,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    logo: DataTypes.TEXT,
->>>>>>> 8a97735... Store images as base64
-=======
->>>>>>> 5cb050f... Update Dapp model with website_url and description fields
     contract_address: {
       type: DataTypes.STRING,
       unique: true,

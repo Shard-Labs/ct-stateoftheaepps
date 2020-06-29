@@ -1,13 +1,5 @@
 version: '3'
 services:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  sqlite-server:
-    image: 'keinos/sqlite3:latest'
->>>>>>> f208604... Add docker files
-=======
->>>>>>> 2673bbd... Update Dockerfile
   stateoftheaeapps-backend:
     build: .
     ports:
