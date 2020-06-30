@@ -12,7 +12,7 @@ function Home() {
           blockchain ecosystem. List is updated daily based on the number of
           transactions in the last 24 hours.
         </p>
-        <p className="description-text">
+        <p className="description-text-claim">
           If you want to claim your æpp contact us{' '}
           <a href="mailto:info@cryptotask.org" className="mail-to">
             info@cryptotask.org

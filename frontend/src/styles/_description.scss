@@ -22,13 +22,21 @@
 
     .description-text {
       font-size: 0.8em;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
 
       @media only screen and (min-width: 768px) {
         font-size: 1.3em;
       }
     }
+    .description-text-claim {
+      margin-bottom: 2rem;
+      font-size: 0.6em;
 
+      @media only screen and (min-width: 768px) {
+        font-size: 1.15em;
+        margin-bottom: 5rem;
+      }
+    }
     .mail-to {
       color: $text-color;
     }
