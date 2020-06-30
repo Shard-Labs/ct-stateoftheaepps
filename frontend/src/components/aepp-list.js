@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AeppListItem from '../components/aepp-list-item'
+import AeppListItem from '../components/aepp-list-item';
 
 const aeppList = [
   {
@@ -29,22 +29,21 @@ const aeppList = [
   },
 ];
 
-
-
-
 function AeppList() {
-
-
   return (
     <ul className="aepp-list">
-      {
-        aeppList.map((item, index) => <AeppListItem index={index + 1} id={item.id} name={item.name} aeppUrl={item.aeppUrl} imageUrl={item.imageUrl} transactionsNumber={item.transactionsNumber} />)
-      }
+      {aeppList.map((item, index) => (
+        <AeppListItem
+          index={index + 1}
+          id={item.id}
+          name={item.name}
+          aeppUrl={item.aeppUrl}
+          imageUrl={item.imageUrl}
+          transactionsNumber={item.transactionsNumber}
+        />
+      ))}
     </ul>
-
   );
-
-
 }
 
 export default AeppList;

@@ -1,10 +1,15 @@
 import React from 'react';
 
-
-function AeppListItem({ id, name, aeppUrl, imageUrl, transactionsNumber, index }) {
-
+function AeppListItem({
+  id,
+  name,
+  aeppUrl,
+  imageUrl,
+  transactionsNumber,
+  index,
+}) {
   return (
-    <li className="aepp-list-item" key={id} >
+    <li className="aepp-list-item" key={id}>
       <span className="rank">{index}.</span>
       <a
         href={aeppUrl}
@@ -12,7 +17,7 @@ function AeppListItem({ id, name, aeppUrl, imageUrl, transactionsNumber, index }
         className="aepp-logo"
         rel="noopener noreferrer"
       >
-        <img src={imageUrl} className="aepp-logo" alt={name} />
+        <img src={imageUrl} alt={name} />
       </a>
       <a
         href={aeppUrl}
@@ -24,9 +29,6 @@ function AeppListItem({ id, name, aeppUrl, imageUrl, transactionsNumber, index }
       </a>
       <span className="transactions-number">{transactionsNumber}</span>
     </li>
-
-
-
   );
 }
 

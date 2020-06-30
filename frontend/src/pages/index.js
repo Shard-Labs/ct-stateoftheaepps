@@ -19,6 +19,13 @@ function Home() {
           </a>
           .
         </p>
+        <ul className="list-description">
+          <li>Rank</li>
+          <li className="list-description-name">
+            Top List by Transactions in last 24 hours
+          </li>
+          <li>Number of transactions</li>
+        </ul>
       </section>
       <AeppList />
     </Layout>
