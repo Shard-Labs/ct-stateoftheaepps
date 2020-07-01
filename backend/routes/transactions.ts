@@ -4,7 +4,7 @@ import Dapp from '../models/Dapp.ts';
 // @route     GET api/dapps
 const getDapps = async ({ response }: { response: any }) => {
   try {
-    const dapps = await Dapp.all();
+    const dapps = await Dapp.orderBy('tx_count', 'desc').all();
 
     response.body = {
       success: true,
