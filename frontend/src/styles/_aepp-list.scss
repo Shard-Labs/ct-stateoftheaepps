@@ -49,16 +49,16 @@
 .aepp-name {
   color: $text-color;
   flex: 1;
+  flex-basis: 60%;
 
   @media screen and (min-width: 768px) {
     font-size: 1.4em;
-    text-align: start;
-    padding-left: 30%;
   }
 }
 
 .transactions-number {
   color: $accent-color;
+  flex-basis: 15%;
 
   @media screen and (min-width: 768px) {
     font-size: 1.75em;

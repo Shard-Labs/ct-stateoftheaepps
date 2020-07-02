@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/layout';
 import AeppList from '../components/aepp-list';
 
 function Home() {
+  const apiUrl = 'http://localhost:5000/api/dapps';
+  const [aeppList, setAeppList] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await fetch(apiUrl);
+      const resultData = await result.json();
+
+      const transformedData = resultData.data.map(item => {
+        return {
+          name: item.dapp_name,
+          aeppUrl: item.website_url,
+          imageSrc: item.logo,
+          transactionsNumber: item.tx_count,
+        };
+      });
+      console.log(transformedData);
+      setAeppList(transformedData);
+    }
+    fetchData();
+  }, []);
+
+  console.log(aeppList);
+
   return (
     <Layout>
       <section className="description">
@@ -20,14 +44,15 @@ function Home() {
           .
         </p>
         <ul className="list-description">
-          <li>Rank</li>
+          <li className="list-description-rank">Rank</li>
+          <li className="list-description-logo">logo</li>
           <li className="list-description-name">
             Top List by Transactions in last 24 hours
           </li>
-          <li>Number of transactions</li>
+          <li className="list-description-number">Number of transactions</li>
         </ul>
       </section>
-      <AeppList />
+      <AeppList aeppList={aeppList} />
     </Layout>
   );
 }

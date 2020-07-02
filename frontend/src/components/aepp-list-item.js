@@ -1,23 +1,16 @@
 import React from 'react';
 
-function AeppListItem({
-  id,
-  name,
-  aeppUrl,
-  imageUrl,
-  transactionsNumber,
-  index,
-}) {
+function AeppListItem({ rank, name, aeppUrl, imageUrl, transactionsNumber }) {
   return (
-    <li className="aepp-list-item" key={id}>
-      <span className="rank">{index}.</span>
+    <li className="aepp-list-item">
+      <span className="rank">{rank}.</span>
       <a
         href={aeppUrl}
         target="_blank"
         className="aepp-logo"
         rel="noopener noreferrer"
       >
-        <img src={imageUrl} alt={name} />
+        <img src={`data:image/svg+xml;base64, ${ imageUrl }`} alt={name} />
       </a>
       <a
         href={aeppUrl}
