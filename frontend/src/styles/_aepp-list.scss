@@ -34,7 +34,7 @@
 
 .aepp-logo {
   width: 2.65rem;
-  margin-left: 10%;
+  margin-left: 5%;
 
   img {
     width: 100%;
@@ -49,7 +49,6 @@
 .aepp-name {
   color: $text-color;
   flex: 1;
-  flex-basis: 60%;
 
   @media screen and (min-width: 768px) {
     font-size: 1.4em;
@@ -58,7 +57,6 @@
 
 .transactions-number {
   color: $accent-color;
-  flex-basis: 15%;
 
   @media screen and (min-width: 768px) {
     font-size: 1.75em;
