@@ -1,55 +1,60 @@
 import Dapp from '../models/Dapp.ts';
-import { config } from 'https://deno.land/x/dotenv/mod.ts';
-
-const env = config();
+import { Contract } from '../types.ts';
+import { Base64 } from '../deps.ts';
 
 // Store dapp info to DB
-const getTransactions = async (url: string) => {
+const getTransactions = async (
+  api_url: string,
+  contracts: Contract[],
+  height_url: string
+) => {
+  const currentHeight = await (await fetch(height_url)).json();
+  const firstBlockToday = currentHeight.height - 480;
+  console.log('Block height must be at least: ' + firstBlockToday);
+
   try {
-    const res = await fetch(url);
-    const data = await res.json();
+    contracts.forEach(async (contract) => {
+      const res = await fetch(api_url + contract.contract_address);
+      const data = await res.json();
 
-    const currentHeight = await (await fetch(env.HEIGHT_URL)).json();
+      // Keep only transactions in last 24 hours
+      const filteredData = data.transactions.filter(
+        (transaction: { [key: string]: number }) =>
+          transaction.block_height >= firstBlockToday
+      );
 
-    const firstBlockToday = currentHeight.height - 480;
+      console.log('Total number of transactions: ' + data.transactions.length);
+      console.log('Filtered number of transactions: ' + filteredData.length);
 
-    console.log('Block height must be at least: ' + firstBlockToday);
+      const base64image = Base64.fromFile(
+        `${Deno.cwd()}/public/img/${contract.image_name}`
+      ).toString();
 
-    // Keep only transactions in last 24 hours
-    const filteredData = data.transactions.filter(
-      (transaction: { [key: string]: number }) =>
-        transaction.block_height >= firstBlockToday
-    );
+      const dapp = await Dapp.where(
+        'contract_address',
+        contract.contract_address
+      ).get();
 
-    console.log('Total number of transactions: ' + data.transactions.length);
-    console.log('Filtered number of transactions: ' + filteredData.length);
-
-    // Get contract address from URL
-    const contract_address = url
-      .split('/')
-      .filter((e) => e)
-      .slice(-1)[0];
-
-    const dapp = await Dapp.where(
-      'contract_address',
-      data.transactions[0].tx.contract_id
-    ).get();
-
-    // Check if entry exists
-    if (dapp.length > 0) {
-      await Dapp.where('contract_address', contract_address).update({
-        dapp_name: 'Placeholder',
-        tx_count: filteredData.length,
-        img_url: 'https://imgur.com/I80W1Q0.png',
-      });
-    } else {
-      await Dapp.create({
-        dapp_name: 'Placeholder',
-        tx_count: filteredData.length,
-        img_url: 'https://imgur.com/I80W1Q0.png',
-        contract_address,
-      });
-    }
+      // Check if entry exists
+      if (dapp.length > 0) {
+        await Dapp.where('contract_address', contract.contract_address).update({
+          dapp_name: contract.name,
+          website_url: contract.website_url,
+          description: contract.description,
+          tx_count: filteredData.length,
+          logo: base64image,
+        });
+      } else {
+        await Dapp.create({
+          dapp_name: contract.name,
+          website_url: contract.website_url,
+          description: contract.description,
+          tx_count: filteredData.length,
+          contract_address: contract.contract_address,
+          logo: base64image,
+        });
+      }
+    });
   } catch (e) {
     console.log(e.message);
     console.log(e.code);

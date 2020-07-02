@@ -19,13 +19,10 @@ function Home() {
           transactionsNumber: item.tx_count,
         };
       });
-      console.log(transformedData);
       setAeppList(transformedData);
     }
     fetchData();
   }, []);
-
-  console.log(aeppList);
 
   return (
     <Layout>
