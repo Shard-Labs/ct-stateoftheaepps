@@ -1,7 +1,7 @@
 version: '3'
 services:
   stateoftheaeapps-backend:
-    build: .
+    build: ./backend/
     #image: shardlabs/ct-stateoftheaepps:stable
     ports:
       - '5000:5000'
