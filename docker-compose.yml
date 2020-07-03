@@ -1,6 +1,7 @@
 version: '3'
 services:
   stateoftheaeapps-backend:
+    image: shardlabs/ct-stateoftheaepps:${TAG}
     build: ./backend/
     #image: shardlabs/ct-stateoftheaepps:stable
     ports:
