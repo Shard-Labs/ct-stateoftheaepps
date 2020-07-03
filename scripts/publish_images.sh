@@ -4,16 +4,16 @@ set -e
 # If not staging or master branch are existing
 export TAG="$CIRCLE_BRANCH"
 
-if [ "$CIRCLE_BRANCH" == "develop" ]; then 
-    export TAG="latest"
-fi
-
 if [ "$CIRCLE_BRANCH" == "master" ]; then
     export TAG="stable"; 
 fi
 
 if [ "$CIRCLE_BRANCH" == "ci_test" ]; then
     export TAG="test"; 
+fi
+
+if [ "$CIRCLE_BRANCH" == "backend" ]; then
+    export TAG="latest"; 
 fi
 
 echo $TAG
