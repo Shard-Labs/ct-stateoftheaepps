@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  build_push_docker:
+    docker:
+      - image: circleci/node:10.19.0-buster # vrti skriptu u tom imageu
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: ./scripts/publish_images.sh
+
+workflows:
+  version: 2.1
+  build_and_push:
+    jobs:
+      - build_push_docker:
+          context: shardlabs
+          filters:
+            branches:
+              only:
+                - master
+                - ci_test
+                - backend
