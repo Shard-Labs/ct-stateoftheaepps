@@ -2,14 +2,10 @@ import Dapp from '../models/Dapp.ts';
 import { Contract } from '../types.ts';
 import { Base64 } from '../deps.ts';
 
-// Store dapp info to DB
-const getTransactions = async (
-  api_url: string,
-  contracts: Contract[],
-  height_url: string
-) => {
+// Store dapp info to DB (tx count from last 30 days)
+const getTransactions = async (api_url: string, contracts: Contract[], height_url: string) => {
   const currentHeight = await (await fetch(height_url)).json();
-  const firstBlockToday = currentHeight.height - 480;
+  const firstBlockToday = currentHeight.height - 14400;
   console.log('Block height must be at least: ' + firstBlockToday);
 
   try {
@@ -19,8 +15,7 @@ const getTransactions = async (
 
       // Keep only transactions in last 24 hours
       const filteredData = data.transactions.filter(
-        (transaction: { [key: string]: number }) =>
-          transaction.block_height >= firstBlockToday
+        (transaction: { [key: string]: number }) => transaction.block_height >= firstBlockToday
       );
 
       console.log('Total number of transactions: ' + data.transactions.length);
@@ -30,10 +25,7 @@ const getTransactions = async (
         `${Deno.cwd()}/public/img/${contract.image_name}`
       ).toString();
 
-      const dapp = await Dapp.where(
-        'contract_address',
-        contract.contract_address
-      ).get();
+      const dapp = await Dapp.where('contract_address', contract.contract_address).get();
 
       // Check if entry exists
       if (dapp.length > 0) {
