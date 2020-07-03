@@ -1,7 +1,7 @@
 import React from 'react';
-import Placeholder from '../assets/images/Placeholder.png';
+import PlaceholderImage from '../assets/images/PlaceholderImage.png';
 
-function AeppListItem({ rank, name, aeppUrl, imageUrl, transactionsNumber }) {
+function AeppListItem({ rank, name, aeppUrl, imageSrc, transactionsNumber }) {
   return (
     <li className="aepp-list-item">
       <span className="rank">{rank}.</span>
@@ -11,7 +11,7 @@ function AeppListItem({ rank, name, aeppUrl, imageUrl, transactionsNumber }) {
         className="aepp-logo"
         rel="noopener noreferrer"
       >
-        <img src={`data:image/svg+xml;base64, ${ imageUrl }` ? `data:image/svg+xml;base64, ${ imageUrl }` : Placeholder} alt={name} />
+        <img src={imageSrc ? `data:image/svg+xml;base64, ${ imageSrc }` : PlaceholderImage} alt={name} />
       </a>
       <a
         href={aeppUrl}

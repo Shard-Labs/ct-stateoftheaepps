@@ -1,6 +1,5 @@
 .aepp-list {
   padding: 0;
-  padding-bottom: 5rem;
 }
 
 .aepp-list-item {
@@ -34,7 +33,7 @@
 
 .aepp-logo {
   width: 2.65rem;
-  margin-left: 5%;
+  margin-left: 10%;
 
   img {
     width: 100%;
@@ -57,6 +56,7 @@
 
 .transactions-number {
   color: $accent-color;
+  flex: 0.2;
 
   @media screen and (min-width: 768px) {
     font-size: 1.75em;

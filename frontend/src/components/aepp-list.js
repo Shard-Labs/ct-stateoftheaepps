@@ -10,7 +10,7 @@ function AeppList({ aeppList }) {
           rank={index + 1}
           name={item.name}
           aeppUrl={item.aeppUrl}
-          imageUrl={item.imageSrc}
+          imageSrc={item.imageSrc}
           transactionsNumber={item.transactionsNumber}
         />
       ))}

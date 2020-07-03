@@ -40,6 +40,9 @@ function Home() {
           </a>
           .
         </p>
+      </section>
+
+      <div className="list-container">
         <ul className="list-description">
           <li className="list-description-rank">Rank</li>
           <li className="list-description-logo">logo</li>
@@ -48,8 +51,10 @@ function Home() {
           </li>
           <li className="list-description-number">Number of transactions</li>
         </ul>
-      </section>
-      <AeppList aeppList={aeppList} />
+
+
+        <AeppList aeppList={aeppList} />
+      </div>
     </Layout>
   );
 }
