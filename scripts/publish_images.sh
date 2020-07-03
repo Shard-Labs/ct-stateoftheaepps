@@ -20,7 +20,7 @@ echo $TAG
 
 docker login --username $DOCKER_USER --password $DOCKER_PASS
 
-curl https://raw.githubusercontent.com/Shard-Labs/ct-stateoftheaepps/${CIRCLE_BRANCH}/docker-compose.yaml
+curl https://raw.githubusercontent.com/Shard-Labs/ct-stateoftheaepps/${CIRCLE_BRANCH}/docker-compose.build.yaml
 
-TAG=$TAG docker-compose build
-TAG=$TAG docker-compose push
+TAG=$TAG docker-compose -f docker-compose.build.yml build
+TAG=$TAG docker-compose -f docker-compose.build.yml push

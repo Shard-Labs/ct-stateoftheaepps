@@ -18,4 +18,5 @@ workflows:
           filters:
             branches:
               only:
+                - master
                 - ci_test

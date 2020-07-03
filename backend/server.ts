@@ -22,7 +22,5 @@ app.use(async (context) => {
 connectToDB();
 cronStart();
 
-console.log('gdfoooohi');
-
 console.log(`Server running on port ${env.PORT}`);
 await app.listen({ port: Number(env.PORT) });
