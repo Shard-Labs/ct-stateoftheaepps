@@ -1,5 +1,4 @@
 .main {
-  text-align: center;
   margin-top: 0.75rem;
   width: 90%;
   margin: auto;
@@ -11,76 +10,84 @@
     margin-top: 2rem;
     padding-bottom: 5rem;
   }
+}
 
-  .description {
+.section-description {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 5rem;
+  }
+
+  .section-title-main {
+    font-size: 1.1em;
     margin-bottom: 2rem;
+
     @media only screen and (min-width: 768px) {
-      margin-bottom: 5rem;
+      font-size: 3em;
     }
+  }
 
-    .title-main {
-      font-size: 1.1em;
-      margin-bottom: 2rem;
+  .section-description-text {
+    font-size: 0.8em;
+    margin-bottom: 1.5rem;
 
-      @media only screen and (min-width: 768px) {
-        font-size: 3em;
-      }
+    @media only screen and (min-width: 768px) {
+      font-size: 1.3em;
     }
+  }
 
-    .description-text {
-      font-size: 0.8em;
-      margin-bottom: 1.5rem;
+  .section-description-text-claim {
+    font-size: 0.6em;
 
-      @media only screen and (min-width: 768px) {
-        font-size: 1.3em;
-      }
+    @media only screen and (min-width: 768px) {
+      font-size: 1.15em;
     }
-    .description-text-claim {
-      font-size: 0.6em;
+  }
 
-      @media only screen and (min-width: 768px) {
-        font-size: 1.15em;
-      }
-    }
-    .mail-to {
-      color: $text-color;
-    }
+  .mail-to {
+    color: $text-color;
   }
 }
 
-.list-container {
+.aepp-list-container {
   @media screen {
     padding-bottom: 5rem;
   }
 }
 
-.list-description {
+.aepp-list-header {
   display: none;
 
   @media screen and (min-width: 1024px) {
     display: flex;
     margin-bottom: 0;
     list-style-type: none;
-    padding: 0 1.5rem;
+    padding: 1rem 2rem;
     font-size: 0.75em;
     justify-content: space-between;
     align-items: center;
   }
-}
-
-.list-description-name {
-  flex: 1;
-}
-
-.list-description-logo {
-  visibility: hidden;
-  width: 2.65rem;
-  margin-left: 10%;
-  @media screen and (min-width: 768px) {
-    width: 5rem;
+  .rank {
+    text-align: left;
+    flex: 1;
   }
-}
+  .logo {
+    visibility: hidden;
+    width: 2.65rem;
+    @media screen and (min-width: 768px) {
+      width: 5rem;
+    }
+  }
 
-.list-description-number {
-  flex: 0.2;
+  .aepp-name {
+    flex: 6;
+    text-align: center;
+  }
+
+  .transaction-number {
+    flex: 1;
+    text-align: right;
+  }
 }
