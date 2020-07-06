@@ -1,0 +1,22 @@
+version: '3'
+services:
+  stateoftheaeapps-backend:
+    image: shardlabs/ct-stateoftheaepps-backend:stable
+    container_name: stateoftheaeapps-backend
+    ports:
+      - '2052:5000'
+    networks:
+      - stateoftheaeapps-network
+    restart: always
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - '80:80'
+    volumes:
+      - './nginx/:/etc/nginx/conf.d/'
+    restart: always
+    networks:
+      - stateoftheaeapps-network
+networks:
+  stateoftheaeapps-network:
