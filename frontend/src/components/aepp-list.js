@@ -1,6 +1,6 @@
 import React from 'react';
 import AeppListItem from './Aepp-list-item';
-import Skeleton from './Skeleton'
+import Skeleton from './Skeleton';
 
 function AeppList({ aeppList, isLoading }) {
   return (

@@ -1,60 +1,76 @@
-@keyframes load {
-  from {
-    left: -8rem;
-  }
-  to {
-    left: 100%;
-  }
-}
-
-.skeleton-list-item::before {
-  display: block;
-  position: absolute;
-  left: -8rem;
-  top: 0;
-  height: 100%;
-  width: 8rem;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    $item-bg-color 50%,
-    transparent 100%
-  );
-  animation: load 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.skeleton-list-item {
-  width: 90%;
-  margin-bottom: 1rem;
-  height: 4.5rem;
-  border-radius: 5%;
-  box-shadow: 0 0.25rem 0.25rem $list-item-shadow-color;
+@mixin skeleton-item {
   position: relative;
   overflow: hidden;
+  background-color: $skeleton-bg-color;
+  display: inline-block;
+  border-radius: 5%;
 
-  @media screen and (min-width: 768px) {
-    width: 70%;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(#fff, 0) 0,
+      rgba(#fff, 0.2) 20%,
+      rgba(#fff, 0.5) 60%,
+      rgba(#fff, 0)
+    );
+    animation: shimmer 2s infinite;
+    content: '';
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
   }
 }
 
-.skeleton-image {
-  width: 2.65rem;
-  border-radius: 50%;
-  display: inline-block;
-  background-color: $skeleton-bg-color;
+.skeleton-rank {
+  display: none;
+
+  @include skeleton-item;
 
   @media screen and (min-width: 768px) {
-    width: 5rem;
+    height: 1.25rem;
+    flex: 0 1 2%;
   }
 }
 
-.skeleton-app-name {
-  height: 2rem;
-  width: 8.75rem;
-  display: inline-block;
-  background-color: $skeleton-bg-color;
+.skeleton-logo {
+  height: 2.65rem;
+  flex: 0 1 15%;
+
+  @include skeleton-item;
 
   @media screen and (min-width: 768px) {
-    width: 23.75rem;
+    height: 4.5rem;
+    flex: 0 1 5%;
+  }
+}
+
+.skeleton-name {
+  height: 1rem;
+  flex: 0 1 60%;
+
+  @include skeleton-item;
+
+  @media screen and (min-width: 768px) {
+    height: 1.4rem;
+  }
+}
+
+.skeleton-number {
+  height: 1rem;
+  flex: 0 1 8%;
+
+  @include skeleton-item;
+
+  @media screen and (min-width: 768px) {
+    height: 1.75rem;
   }
 }
