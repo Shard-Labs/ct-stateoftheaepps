@@ -1,0 +1,20 @@
+version: '3'
+services:
+  stateoftheaeapps-backend:
+    container_name: stateoftheaeapps-backend
+    ports:
+      - '2052:5000'
+    networks:
+      - stateoftheaeapps-network
+    restart: always
+  nginx:
+    container_name: nginx
+    ports:
+      - '80:80'
+    volumes:
+      - './nginx/:/etc/nginx/conf.d/'
+    restart: always
+    networks:
+      - stateoftheaeapps-network
+networks:
+  stateoftheaeapps-network:
