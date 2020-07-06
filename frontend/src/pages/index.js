@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import AeppList from '../components/Aepp-list';
 
 function Home() {
-  const apiUrl = 'http://localhost:5000/api/dapps';
+  const apiUrl = 'http://api.aepps.shardlabs.io/api/dapps';
   const [aeppList, setAeppList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -35,8 +35,8 @@ function Home() {
         <h1 className="section-title-main">List of most used Æternity æpps</h1>
         <p className="section-description-text">
           Check to see the progress and development of æpps and Æternity
-          blockchain ecosystem. List is updated daily based on the number of
-          transactions in the last 24 hours.
+          blockchain ecosystem. List is updated monthly based on the number of
+          transactions previous month.
         </p>
         <p className="section-description-text-claim">
           If you want to claim your æpp contact us{' '}
@@ -52,11 +52,10 @@ function Home() {
           <li className="rank">Rank</li>
           <li className="logo">logo</li>
           <li className="aepp-name">
-            Top List by Transactions in last 24 hours
+            Top List by Transactions last month
           </li>
           <li className="transaction-number">Number of transactions</li>
         </ul>
-
 
         <AeppList aeppList={aeppList} isLoading={isLoading} />
       </div>
