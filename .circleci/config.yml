@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build_push_docker:
     docker:
-      - image: circleci/node:10.19.0-buster # vrti skriptu u tom imageu
+      - image: circleci/node:10.19.0-buster
     steps:
       - checkout
       - setup_remote_docker
