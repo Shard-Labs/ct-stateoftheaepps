@@ -3,7 +3,5 @@ services:
   stateoftheaeapps-backend:
     image: shardlabs/ct-stateoftheaepps-backend:stable
     #build: ./backend/
-    #ports:
-    #  - '5000:5000'
-  nginx:
-    image: nginx:alpine
+    ports:
+      - '5000:5000'
