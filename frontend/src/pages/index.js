@@ -1,34 +1,44 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '../components/Layout';
-import AeppList from '../components/Aepp-list';
+import Layout from '../components/layout';
+import AeppList from '../components/aepp-list';
 
 function Home() {
-  const apiUrl = 'http://api.aepps.shardlabs.io/api/dapps';
+  if (process.env.NODE_ENV === 'production') {
+    apiUrl = GATSBY_BASE_URL;
+  }
+  else if (process.env.NODE_ENV === 'development') {
+    apiUrl = GATSBY_LOCAL_URL;
+  }
   const [aeppList, setAeppList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
 
     async function fetchData() {
-      const result = await fetch(apiUrl);
-      const resultData = await result.json();
+      setIsLoading(true);
+      try {
+        const result = await fetch(apiUrl);
+        const resultData = await result.json();
+        const transformedData = resultData.data.map(item => {
+          return {
+            name: item.dapp_name,
+            aeppUrl: item.website_url,
+            imageSrc: item.logo,
+            transactionsNumber: item.tx_count,
+          };
+        });
 
-      const transformedData = resultData.data.map(item => {
-        return {
-          name: item.dapp_name,
-          aeppUrl: item.website_url,
-          imageSrc: item.logo,
-          transactionsNumber: item.tx_count,
-        };
-      });
+        setAeppList(transformedData);
+        setIsLoading(false);
+      }
+      catch (err) {
+        console.log(err)
+      }
 
-      setAeppList(transformedData);
-      setIsLoading(false);
     }
     fetchData();
   }, []);
-
+  console.log(process.env.NODE_ENV);
   return (
     <Layout>
       <section className="section-description">
@@ -38,10 +48,10 @@ function Home() {
           blockchain ecosystem. List is updated monthly based on the number of
           transactions previous month.
         </p>
-        <p className="section-description-text-claim">
+        <p className="section-description-text">
           If you want to claim your æpp contact us{' '}
-          <a href="mailto:info@cryptotask.org" className="mail-to">
-            info@cryptotask.org
+          <a href="mailto:ivan@cryptotask.org" className="mail-to">
+            ivan@cryptotask.org
           </a>
           .
         </p>

@@ -1,11 +1,11 @@
 import React from 'react';
-import AeppListItem from './Aepp-list-item';
-import Skeleton from './Skeleton';
+import AeppListItem from './aepp-list-item';
+import AeppListSkeleton from './aepp-list-skeleton';
 
 function AeppList({ aeppList, isLoading }) {
   return (
     <ul className="aepp-list">
-      {isLoading ? <Skeleton /> : aeppList.map((item, index) => (
+      {isLoading ? Array(1).fill(<AeppListSkeleton />) : aeppList.map((item, index) => (
         <AeppListItem
           key={item.name}
           rank={index + 1}

@@ -30,43 +30,45 @@
   }
 }
 
-.skeleton-rank {
+.aepp-list-skeleton-rank {
   display: none;
-
   @include skeleton-item;
 
   @media screen and (min-width: 768px) {
     height: 1.25rem;
-    flex: 0 1 2%;
+    width: 1.25rem;
   }
 }
 
-.skeleton-logo {
+.aepp-list-skeleton-logo {
   height: 2.65rem;
-  flex: 0 1 15%;
+  width: 2.65rem;
+  border-radius: 5%;
 
   @include skeleton-item;
 
   @media screen and (min-width: 768px) {
     height: 4.5rem;
-    flex: 0 1 5%;
+    width: 4.5rem;
   }
 }
 
-.skeleton-name {
+.aepp-list-skeleton-name {
   height: 1rem;
-  flex: 0 1 60%;
+  width: 30rem;
+  flex: 0.6;
 
   @include skeleton-item;
 
   @media screen and (min-width: 768px) {
-    height: 1.4rem;
+    height: 1.75rem;
   }
 }
 
-.skeleton-number {
+.aepp-list-skeleton-number {
   height: 1rem;
-  flex: 0 1 8%;
+  width: 2rem;
+  flex: 0.05;
 
   @include skeleton-item;
 
