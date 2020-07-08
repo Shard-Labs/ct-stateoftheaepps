@@ -1,5 +1,4 @@
 import React from 'react';
-import PlaceholderImage from '../../assets/images/PlaceholderImage.png';
 
 function ListItem({ rank, name, aeppUrl, imageSrc, transactionsNumber }) {
   return (
@@ -12,11 +11,7 @@ function ListItem({ rank, name, aeppUrl, imageSrc, transactionsNumber }) {
         rel="noopener noreferrer"
       >
         <img
-          src={
-            imageSrc
-              ? `data:image/svg+xml;base64, ${imageSrc}`
-              : PlaceholderImage
-          }
+          src={(imageSrc = `data:image/svg+xml;base64, ${imageSrc}`)}
           alt={name}
         />
       </a>

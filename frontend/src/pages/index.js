@@ -13,6 +13,7 @@ function Home() {
       try {
         const result = await fetch(BASE_URL);
         const resultData = await result.json();
+
         const transformedData = resultData.data.map(item => {
           return {
             name: item.dapp_name,
@@ -40,14 +41,13 @@ function Home() {
           transactions previous month.
         </p>
         <p className="section-description-text">
-          If you want to claim your æpp contact us{' '}
+          If you want to claim your æpp contact us
           <a href="mailto:ivan@cryptotask.org" className="mail-to">
             ivan@cryptotask.org
           </a>
           .
         </p>
       </section>
-
       <div className="aepp-list-container">
         <ul className="aepp-list-header">
           <li className="rank">Rank</li>
@@ -55,7 +55,6 @@ function Home() {
           <li className="aepp-name">Top List by Transactions last month</li>
           <li className="transaction-number">Number of transactions</li>
         </ul>
-
         <List aeppList={aeppList} isLoading={isLoading} />
       </div>
     </Layout>

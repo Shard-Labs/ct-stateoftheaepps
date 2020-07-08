@@ -6,7 +6,7 @@ function List({ aeppList, isLoading }) {
   return (
     <ul className="aepp-list">
       {isLoading
-        ? Array(3).fill().map(index => <ListItemSkeleton key={index} />)
+        ? Array(3).fill().map((item, index) => <ListItemSkeleton key={index} />)
         : aeppList.map((item, index) => (
           <ListItem
             key={item.name}
