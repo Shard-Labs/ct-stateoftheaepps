@@ -4,9 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div>
-        <span className="text-footer">
-          Powered by
-      </span>
+        <span className="text-footer">Powered by</span>
         <a
           href="https://shardlabs.io/"
           className="link-footer"
@@ -16,7 +14,6 @@ function Footer() {
           shardlabs.io
         </a>
       </div>
-
     </footer>
   );
 }

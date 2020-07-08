@@ -31,12 +31,13 @@
 }
 
 .aepp-list-skeleton-rank {
-  display: none;
+  height: 1.25rem;
+  width: 1.25rem;
+
   @include skeleton-item;
 
   @media screen and (min-width: 768px) {
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 1.75rem;
   }
 }
 

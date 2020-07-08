@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '../components/layout';
-import AeppList from '../components/aepp-list';
+import Layout from '../components/layout/layout';
+import List from '../components/aepp/list';
+import { BASE_URL } from '../config/constants';
 
 function Home() {
-  require('dotenv').config();
-  console.log(process.env.NODE_ENV);
-  const apiUrl = (process.env.NODE_ENV === 'development' ? process.env.GATSBY_LOCAL_URL : process.env.GATSBY_BASE_URL);
-
   const [aeppList, setAeppList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-
     async function fetchData() {
       setIsLoading(true);
       try {
-        const result = await fetch(apiUrl);
+        const result = await fetch(BASE_URL);
         const resultData = await result.json();
         const transformedData = resultData.data.map(item => {
           return {
@@ -28,11 +24,9 @@ function Home() {
 
         setAeppList(transformedData);
         setIsLoading(false);
+      } catch (err) {
+        console.log(err);
       }
-      catch (err) {
-        console.log(err)
-      }
-
     }
     fetchData();
   }, []);
@@ -58,13 +52,11 @@ function Home() {
         <ul className="aepp-list-header">
           <li className="rank">Rank</li>
           <li className="logo">logo</li>
-          <li className="aepp-name">
-            Top List by Transactions last month
-          </li>
+          <li className="aepp-name">Top List by Transactions last month</li>
           <li className="transaction-number">Number of transactions</li>
         </ul>
 
-        <AeppList aeppList={aeppList} isLoading={isLoading} />
+        <List aeppList={aeppList} isLoading={isLoading} />
       </div>
     </Layout>
   );

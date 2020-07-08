@@ -2,9 +2,9 @@
 @import './colors';
 @import './base';
 @import './description';
-@import './aepp-list';
 
 //Components
-@import './header';
-@import './footer';
-@import './aepp-list-skeleton';
+@import './components/header';
+@import './components/footer';
+@import './components/aepp/list';
+@import './components/aepp/list-item-skeleton';

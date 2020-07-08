@@ -1,8 +1,7 @@
 import React from 'react';
 
-function AeppListSkeleton() {
+function ListItemSkeleton() {
   return (
-
     <li className="aepp-list-item">
       <div className="aepp-list-skeleton-rank"></div>
       <div className="aepp-list-skeleton-logo"></div>
@@ -12,4 +11,4 @@ function AeppListSkeleton() {
   );
 }
 
-export default AeppListSkeleton;
+export default ListItemSkeleton;
