@@ -4,7 +4,9 @@ import AeppList from '../components/aepp-list';
 
 function Home() {
   require('dotenv').config();
-  const apiUrl = (process.env.NODE_ENV === 'development' ? process.env.GATSBY_BASE_URL : process.env.GATSBY_LOCAL_URL)
+  console.log(process.env.NODE_ENV);
+  const apiUrl = (process.env.NODE_ENV === 'development' ? process.env.GATSBY_LOCAL_URL : process.env.GATSBY_BASE_URL);
+
   const [aeppList, setAeppList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -34,7 +36,6 @@ function Home() {
     }
     fetchData();
   }, []);
-  console.log(process.env.NODE_ENV);
   return (
     <Layout>
       <section className="section-description">
