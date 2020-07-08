@@ -3,12 +3,8 @@ import Layout from '../components/layout';
 import AeppList from '../components/aepp-list';
 
 function Home() {
-  if (process.env.NODE_ENV === 'production') {
-    apiUrl = GATSBY_BASE_URL;
-  }
-  else if (process.env.NODE_ENV === 'development') {
-    apiUrl = GATSBY_LOCAL_URL;
-  }
+  require('dotenv').config()
+  const apiUrl = (process.env.NODE_ENV === 'development' ? process.env.GATSBY_BASE_URL : process.env.GATSBY_LOCAL_URL)
   const [aeppList, setAeppList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
