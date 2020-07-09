@@ -38,7 +38,7 @@ function Home() {
         <p className="section-description-text">
           Check to see the progress and development of æpps and Æternity
           blockchain ecosystem. List is updated monthly based on the number of
-          transactions previous month.
+          transactions during previous month.
         </p>
         <p className="section-description-text">
           If you want to claim your æpp contact us
@@ -52,8 +52,8 @@ function Home() {
         <ul className="aepp-list-header">
           <li className="rank">Rank</li>
           <li className="logo">logo</li>
-          <li className="aepp-name">Top List by Transactions last month</li>
-          <li className="transaction-number">Number of transactions</li>
+          <li className="aepp-name">Top List by Transactions</li>
+          <li className="transaction-number">Number of Transactions</li>
         </ul>
         <List aeppList={aeppList} isLoading={isLoading} />
       </div>
