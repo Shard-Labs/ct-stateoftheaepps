@@ -1,0 +1,22 @@
+.header {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-right: auto;
+    }
+
+    @media screen and (min-width: 2560px) {
+      display: block;
+      margin-right: auto;
+      margin-left: 5%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

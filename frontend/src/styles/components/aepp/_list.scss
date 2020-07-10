@@ -1,0 +1,67 @@
+.aepp-list {
+  padding: 0;
+}
+
+.aepp-list-item {
+  background-color: $item-bg-color;
+  display: flex;
+  box-shadow: 0 0.25rem 0.25rem $list-item-shadow-color;
+  border-radius: 0.3125rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.125rem;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 768px) {
+    height: 4.5rem;
+    padding: 1rem 2rem;
+  }
+
+  .rank {
+    font-size: 1em;
+    text-align: left;
+    flex: 1;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.25em;
+    }
+  }
+
+  .aepp-logo {
+    width: 2.65rem;
+
+    img {
+      width: 100%;
+      object-fit: scale-down;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 5rem;
+    }
+  }
+
+  .aepp-name {
+    color: $text-color;
+    flex: 6;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.4em;
+    }
+  }
+
+  .transactions-number {
+    color: $accent-color;
+    flex: 1;
+    text-align: right;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.75em;
+    }
+  }
+}
+
+.aepp-list-item:last-child {
+  margin-bottom: 0;
+}

@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import "./colors";
-@import "./base";
-@import "./description";
+@import './colors';
+@import './base';
+@import './description';
 
 //Components
-@import "./header";
-@import "./footer";
+@import './components/header';
+@import './components/footer';
+@import './components/aepp/list';
+@import './components/aepp/list-item-skeleton';

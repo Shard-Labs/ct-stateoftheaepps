@@ -1,31 +1,88 @@
 .main {
-  text-align: center;
   margin-top: 0.75rem;
   width: 90%;
   margin: auto;
   height: 100%;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 
   @media only screen and (min-width: 768px) {
     width: 70%;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.section-description {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 5rem;
   }
 
-  .description {
-    .title-main {
-      font-size: 1.1em;
-      margin-bottom: 0.75rem;
+  .section-title-main {
+    font-size: 1.1em;
+    margin-bottom: 2rem;
 
-      @media only screen and (min-width: 768px) {
-        font-size: 3em;
-      }
+    @media only screen and (min-width: 768px) {
+      font-size: 3em;
     }
+  }
 
-    .description-text {
-      font-size: 0.8em;
+  .section-description-text {
+    font-size: 0.8em;
+    margin-bottom: 1.5rem;
 
-      @media only screen and (min-width: 768px) {
-        font-size: 1.3em;
-      }
+    @media only screen and (min-width: 768px) {
+      font-size: 1.3em;
     }
+  }
+
+  .mail-to {
+    padding-left: 0.4em;
+    color: $text-color;
+  }
+}
+
+.aepp-list-container {
+  @media screen {
+    padding-bottom: 5rem;
+  }
+}
+
+.aepp-list-header {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    margin-bottom: 0;
+    list-style-type: none;
+    padding: 1rem 2rem;
+    font-size: 0.75em;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .rank {
+    text-align: left;
+    flex: 1;
+  }
+
+  .logo {
+    visibility: hidden;
+    width: 2.65rem;
+    @media screen and (min-width: 768px) {
+      width: 5rem;
+    }
+  }
+
+  .aepp-name {
+    flex: 6;
+    text-align: center;
+  }
+
+  .transaction-number {
+    flex: 1;
+    text-align: right;
   }
 }
