@@ -4,4 +4,4 @@
   Æpp stats
 </h1>
 
-List of most uesd aepps on aeternity blockchain updated monthly based on the number of transactions in the previous month.
+List of most used aepps on aeternity blockchain updated daily based on the number of transactions in the last 30 days.
