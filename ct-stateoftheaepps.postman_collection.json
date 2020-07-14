@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "8e02bb31-6014-4370-a5c9-17a70b529d58",
+		"_postman_id": "16c80dfa-f077-4bc6-8882-337c084606a0",
 		"name": "ct-stateoftheaepps",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,12 +11,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/dapps",
+					"raw": "http://api.aepps.shardlabs.io/api/dapps",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"api",
+						"aepps",
+						"shardlabs",
+						"io"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"dapps"
