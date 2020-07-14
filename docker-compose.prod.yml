@@ -17,7 +17,7 @@ services:
       - stateoftheaeapps-backend
     restart: always
     environment:
-      DOMAINS: 'api.aepps.shardlabs.io -> http://stateoftheaeapps-backend:2052'
+      DOMAINS: 'api.aepps.shardlabs.io -> http://stateoftheaeapps-backend:5000'
       # STAGE: 'production' # Don't use production until staging works
       # FORCE_RENEW: 'true'
     networks:
