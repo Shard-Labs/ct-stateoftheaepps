@@ -8,15 +8,20 @@ services:
     networks:
       - stateoftheaeapps-network
     restart: always
-  nginx:
-    image: nginx:alpine
-    container_name: nginx
+  https-portal:
+    image: steveltn/https-portal:1
     ports:
       - '80:80'
-    volumes:
-      - './nginx/:/etc/nginx/conf.d/'
+      - '443:443'
+    links:
+      - stateoftheaeapps-backend
     restart: always
+    environment:
+      DOMAINS: 'api.aepps.shardlabs.io -> http://stateoftheaeapps-backend:5000'
+      STAGE: 'production' # Don't use production until staging works
+      FORCE_RENEW: 'true'
     networks:
       - stateoftheaeapps-network
+
 networks:
   stateoftheaeapps-network:
