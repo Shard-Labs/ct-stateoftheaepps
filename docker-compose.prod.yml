@@ -18,8 +18,8 @@ services:
     restart: always
     environment:
       DOMAINS: 'api.aepps.shardlabs.io -> http://stateoftheaeapps-backend:5000'
-      # STAGE: 'production' # Don't use production until staging works
-      # FORCE_RENEW: 'true'
+      STAGE: 'production' # Don't use production until staging works
+      FORCE_RENEW: 'true'
     networks:
       - stateoftheaeapps-network
 
