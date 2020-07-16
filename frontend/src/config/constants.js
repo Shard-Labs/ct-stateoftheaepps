@@ -1,4 +1,4 @@
 export const BASE_URL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:5000/api/dapps'
-    : 'http://api.aepps.shardlabs.io/api/dapps';
+    : 'https://api.aepps.shardlabs.io/api/dapps';
