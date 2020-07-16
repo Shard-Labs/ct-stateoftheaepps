@@ -11,7 +11,7 @@ function ListItem({ rank, name, aeppUrl, imageSrc, transactionsNumber }) {
         rel="noopener noreferrer"
       >
         <img
-          src={(imageSrc = `data:image/svg+xml;base64, ${imageSrc}`)}
+          src={`data:image/svg+xml;base64, ${ imageSrc }`}
           alt={name}
         />
       </a>

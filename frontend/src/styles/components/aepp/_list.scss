@@ -30,14 +30,16 @@
 
   .aepp-logo {
     width: 2.65rem;
+    height: 2.65rem;
 
     img {
       width: 100%;
-      object-fit: scale-down;
+      height: 100%;
     }
 
     @media screen and (min-width: 768px) {
       width: 5rem;
+      height: 5rem;
     }
   }
 
