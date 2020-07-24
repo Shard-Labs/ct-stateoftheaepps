@@ -42,8 +42,8 @@ function Home() {
         </p>
         <p className="section-description-text">
           If you want to claim your æpp contact us
-          <a href="mailto:ivan@cryptotask.org" className="mail-to">
-            ivan@cryptotask.org
+          <a href="mailto:info.nanovo@gmail.com" className="mail-to">
+            info.nanovo@gmail.com
           </a>
           .
         </p>
