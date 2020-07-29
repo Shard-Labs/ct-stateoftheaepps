@@ -41,11 +41,7 @@ function Home() {
           transactions during previous month.
         </p>
         <p className="section-description-text">
-          If you want to claim your æpp contact us
-          <a href="mailto:info.nanovo@gmail.com" className="mail-to">
-            info.nanovo@gmail.com
-          </a>
-          .
+          If you want to claim your æpp contact us info.nanovo -at- gmail.com.
         </p>
       </section>
       <div className="aepp-list-container">
